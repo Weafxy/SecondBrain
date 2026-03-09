@@ -72,6 +72,7 @@ exit – CLI verlassen
 
 Beispiele:
 
+Die neue Json datei hat Beispiele, einfach aus der Datei löschen und [] eingeben, speichern und alles ist ganz frisch :) 
 Notiz hinzufügen:
 
 brain> add (enter)
