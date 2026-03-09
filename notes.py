@@ -32,12 +32,16 @@ class NotesManager:
 
     def tag_notes(self, tag):
         return [n for n in self.notes if tag in n["tags"]]
-
+    
     def link_notes(self, id1, id2):
+        # beide Notizen gegenseitig verlinken
         for n in self.notes:
             if n["id"] == id1 and id2 not in n["links"]:
                 n["links"].append(id2)
+            if n["id"] == id2 and id1 not in n["links"]:
+                n["links"].append(id1)
         self.storage.save(self.notes)
+
 
     def auto_link(self, new_note):
         """AI-basierte Verknüpfungsvorschläge"""

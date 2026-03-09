@@ -41,6 +41,14 @@ while True:
         else:
             print("Note ID not found.")
 
+    elif action == "link":
+        if len(cmd) != 3:
+            print("Usage: link <ID1> <ID2>")
+        else:
+            id1, id2 = cmd[1], cmd[2]
+            manager.link_notes(id1, id2)
+            print(f"Notes {id1} and {id2} linked!")
+
     elif action == "graph":
         draw_graph(manager.list_notes())
 
